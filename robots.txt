@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourusername.github.io/json-formatter/sitemap.xml
+Sitemap: https://aimuskan1103-design.github.io/json-formatter/sitemap.xml
 
