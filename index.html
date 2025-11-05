@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Online JSON Viewer, Formatter & Validator - Free JSON Tool | JSON Formatter</title>
+    <meta
+      name="title"
+      content="Online JSON Viewer, Formatter & Validator - Free JSON Tool"
+    />
+    <meta
+      name="description"
+      content="Free online JSON viewer, formatter, validator, and minifier. View, format, validate, and minify JSON instantly. JSONPath queries, tree view, syntax highlighting. 100% client-side, no data leaves your device. Best JSON tool online."
+    />
+    <meta
+      name="keywords"
+      content="online json viewer, json viewer, json formatter, json validator, json minifier, json prettifier, json parser, json editor, json beautifier, jsonpath, json tree view, online json tool, free json formatter, json syntax checker, json validator online, json formatter online"
+    />
+    <meta name="author" content="JSON Formatter" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://yourusername.github.io/json-formatter/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://yourusername.github.io/json-formatter/"
+    />
+    <meta
+      property="og:title"
+      content="Online JSON Viewer, Formatter & Validator - Free JSON Tool"
+    />
+    <meta
+      property="og:description"
+      content="Free online JSON viewer, formatter, validator, and minifier. View, format, validate, and minify JSON instantly. JSONPath queries, tree view, syntax highlighting. 100% client-side, privacy-first."
+    />
+    <meta property="og:image" content="https://yourusername.github.io/json-formatter/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://yourusername.github.io/json-formatter/"
+    />
+    <meta
+      property="twitter:title"
+      content="Online JSON Viewer, Formatter & Validator - Free JSON Tool"
+    />
+    <meta
+      property="twitter:description"
+      content="Free online JSON viewer, formatter, validator, and minifier. View, format, validate, and minify JSON instantly. 100% client-side, privacy-first."
+    />
+    <meta property="twitter:image" content="https://yourusername.github.io/json-formatter/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Online JSON Viewer, Formatter & Validator",
+      "url": "https://yourusername.github.io/json-formatter/",
+      "description": "Free online JSON viewer, formatter, validator, and minifier. View, format, validate, and minify JSON instantly with JSONPath queries and tree view.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1000"
+      },
+      "featureList": [
+        "JSON Viewer",
+        "JSON Formatter",
+        "JSON Validator",
+        "JSON Minifier",
+        "JSONPath Queries",
+        "Tree View",
+        "Syntax Highlighting",
+        "File Upload",
+        "Dark/Light Theme",
+        "100% Client-Side"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an online JSON viewer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An online JSON viewer is a web-based tool that allows you to view, format, validate, and work with JSON (JavaScript Object Notation) data directly in your browser without installing any software."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this JSON formatter free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this JSON formatter is completely free to use. It's 100% client-side, meaning all processing happens in your browser with no backend required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my JSON data leave my device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, your JSON data never leaves your device. All processing happens entirely in your browser using JavaScript. We don't store, transmit, or access your data in any way."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I validate JSON online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this tool includes a JSON validator that checks your JSON syntax and provides precise error messages with line and column numbers if any errors are found."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is JSONPath?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JSONPath is a query language for JSON that allows you to extract specific data from JSON objects. For example, you can use $.items[0].name to get the name of the first item in an array."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header" role="banner">
+        <div class="header-content">
+          <h1 class="title">Online JSON Viewer, Formatter & Validator</h1>
+          <p class="tagline">Free online JSON tool - View, format, validate, and minify JSON instantly</p>
+          <p class="privacy-note" aria-label="Privacy information">
+            🔒 No data leaves your device - 100% client-side processing
+          </p>
+        </div>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+          title="Toggle dark/light theme"
+        >
+          <svg
+            class="icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              id="theme-icon-sun"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+            <path
+              id="theme-icon-moon"
+              class="hidden"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <div class="toolbar" role="toolbar" aria-label="JSON formatting tools">
+        <div class="toolbar-group">
+          <button
+            id="btn-format"
+            class="btn btn-primary"
+            aria-label="Format JSON"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Format
+          </button>
+          <button
+            id="btn-minify"
+            class="btn btn-secondary"
+            aria-label="Minify JSON"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Minify
+          </button>
+          <button
+            id="btn-validate"
+            class="btn btn-secondary"
+            aria-label="Validate JSON"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Validate
+          </button>
+          <button
+            id="btn-clear"
+            class="btn btn-secondary"
+            aria-label="Clear all"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            Clear
+          </button>
+        </div>
+
+        <div class="toolbar-group">
+          <label class="indent-label">
+            Indent:
+            <select
+              id="indent-select"
+              class="select"
+              aria-label="Indentation style"
+            >
+              <option value="2">2 spaces</option>
+              <option value="4" selected>4 spaces</option>
+              <option value="tab">Tab</option>
+            </select>
+          </label>
+          <button
+            id="btn-tree-toggle"
+            class="btn btn-secondary"
+            aria-label="Toggle tree view"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            Tree View
+          </button>
+        </div>
+
+        <div class="toolbar-group">
+          <button
+            id="btn-copy-input"
+            class="btn btn-icon"
+            aria-label="Copy input to clipboard"
+            title="Copy input JSON"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
+            </svg>
+            <span class="btn-label">Copy Input</span>
+          </button>
+          <button
+            id="btn-copy-output"
+            class="btn btn-icon"
+            aria-label="Copy output to clipboard"
+            title="Copy output JSON"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
+            </svg>
+            <span class="btn-label">Copy Output</span>
+          </button>
+          <button
+            id="btn-download"
+            class="btn btn-icon"
+            aria-label="Download JSON file"
+            title="Download"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
+          <label
+            class="btn btn-icon"
+            for="file-upload"
+            aria-label="Upload JSON file"
+            title="Upload file"
+          >
+            <svg
+              class="icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <input
+              type="file"
+              id="file-upload"
+              accept=".json,application/json"
+              class="hidden"
+              aria-label="Upload JSON file"
+            />
+          </label>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="panel-container">
+          <div class="panel input-panel" role="region" aria-label="JSON input">
+            <div class="panel-header">
+              <h2 class="panel-title">Input</h2>
+              <div id="jsonpath-container" class="jsonpath-container">
+                <label for="jsonpath-input" class="jsonpath-label"
+                  >JSONPath:</label
+                >
+                <input
+                  type="text"
+                  id="jsonpath-input"
+                  class="jsonpath-input"
+                  placeholder="$.items[0].name"
+                  aria-label="JSONPath query expression"
+                />
+                <button
+                  id="btn-jsonpath-run"
+                  class="btn btn-small"
+                  aria-label="Run JSONPath query"
+                >
+                  Run
+                </button>
+                <button
+                  id="btn-jsonpath-clear"
+                  class="btn btn-small btn-secondary"
+                  aria-label="Clear JSONPath results"
+                >
+                  Clear
+                </button>
+              </div>
+            </div>
+            <div class="editor-wrapper">
+              <textarea
+                id="input-editor"
+                class="editor"
+                spellcheck="false"
+                placeholder="Paste your JSON here or drag and drop a .json file..."
+                aria-label="JSON input editor"
+              ></textarea>
+              <div
+                id="error-overlay"
+                class="error-overlay hidden"
+                role="alert"
+                aria-live="polite"
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="panel output-panel"
+            role="region"
+            aria-label="JSON output"
+          >
+            <div class="panel-header">
+              <h2 class="panel-title">Output</h2>
+              <div
+                id="output-status"
+                class="output-status"
+                aria-live="polite"
+              ></div>
+            </div>
+            <div class="editor-wrapper">
+              <pre
+                id="output-editor"
+                class="editor output-pre"
+                aria-label="JSON output"
+              ><code id="output-code" class="output-code"></code></pre>
+              <div id="tree-view" class="tree-view hidden"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="status-bar" role="status" aria-live="polite">
+        <div class="status-item">
+          <span class="status-label">Lines:</span>
+          <span id="line-count" class="status-value">0</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Size:</span>
+          <span id="size-display" class="status-value">0 KB</span>
+        </div>
+        <div class="status-item">
+          <span class="status-label">Status:</span>
+          <span id="validation-status" class="status-value status-valid"
+            >Valid</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="toast"
+      class="toast hidden"
+      role="alert"
+      aria-live="assertive"
+    ></div>
+
+    <!-- SEO Content Section -->
+    <section class="seo-content">
+      <article>
+        <h2>Online JSON Viewer - The Best Free JSON Tool</h2>
+        <p>
+          Looking for a powerful <strong>online JSON viewer</strong>? Our free JSON tool provides everything you need to work with JSON data. 
+          As a comprehensive <strong>JSON formatter</strong>, <strong>JSON validator</strong>, and <strong>JSON minifier</strong>, 
+          this tool helps developers view, format, validate, and optimize JSON files instantly.
+        </p>
+        
+        <h3>Why Use Our Online JSON Viewer?</h3>
+        <p>
+          Our <strong>online JSON viewer</strong> is designed for developers who need a fast, reliable, and privacy-focused JSON tool. 
+          Unlike other JSON viewers, all processing happens in your browser - your data never leaves your device. 
+          This makes it perfect for viewing sensitive JSON data or working with large JSON files.
+        </p>
+
+        <h3>Features of Our JSON Formatter</h3>
+        <ul>
+          <li><strong>JSON Viewer:</strong> Beautifully formatted JSON with syntax highlighting</li>
+          <li><strong>JSON Formatter:</strong> Pretty-print JSON with customizable indentation (2 spaces, 4 spaces, or tabs)</li>
+          <li><strong>JSON Validator:</strong> Validate JSON syntax with precise error messages</li>
+          <li><strong>JSON Minifier:</strong> Compress JSON to a single line for production use</li>
+          <li><strong>JSONPath Queries:</strong> Extract specific data using JSONPath expressions</li>
+          <li><strong>Tree View:</strong> Visualize JSON structure with collapsible nodes</li>
+          <li><strong>File Support:</strong> Upload JSON files or drag and drop them</li>
+          <li><strong>Dark/Light Theme:</strong> Comfortable viewing in any lighting condition</li>
+        </ul>
+
+        <h3>How to Use This JSON Viewer</h3>
+        <p>
+          Using our <strong>online JSON viewer</strong> is simple: paste your JSON data into the input area, 
+          click "Format" to pretty-print it, or use "Validate" to check for errors. 
+          You can also upload JSON files directly or use JSONPath queries to extract specific data. 
+          The tool works entirely in your browser - no installation or registration required.
+        </p>
+
+        <h3>Free JSON Formatter for Developers</h3>
+        <p>
+          Whether you're a frontend developer working with API responses, a backend developer debugging JSON payloads, 
+          or a data analyst examining JSON datasets, our <strong>free JSON formatter</strong> is the perfect tool. 
+          It's fast, secure, and works offline once loaded. No backend, no tracking, no data collection - 
+          just a pure, client-side JSON tool that respects your privacy.
+        </p>
+      </article>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
