@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://aimuskan1103-design.github.io/json-formatter/sitemap.xml
-
